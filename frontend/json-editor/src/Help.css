@@ -1,0 +1,6 @@
+.help-container {
+  height: 100%;
+  overflow: scroll-y;
+  display: flex;
+  flex-direction: row;
+}

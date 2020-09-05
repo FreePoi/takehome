@@ -1,0 +1,8 @@
+.visual-ui {
+  width: 70%;
+  padding: 15px;
+  overflow-y: auto;
+  overflow-x: auto;
+  border: 1px solid rgb(204, 222, 245);
+  background-color: rgb(236, 241, 248);
+}
