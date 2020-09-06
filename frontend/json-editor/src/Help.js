@@ -6,14 +6,15 @@ import './Help.css'
 export class Help extends React.Component {
 
   state = {
-    jsonText: `[
-      1,
-      2,
-      {
-        "a": 2,
-        "b": [true, false, null, 1, 0, "", "0", [], {}]
-      }
-    ]`,
+    jsonText: 
+`[
+  1,
+  2,
+  {
+    "a": 2,
+    "b": [true, false, null, 1, 0, "", "0", [], {}]
+  }
+]`,
     json: [
       1,
       2,

@@ -4,7 +4,7 @@ import './json-input.css';
 export class JSONInput extends React.Component {
 
   supportTab (e) {
-    if(e.keyCode == 9){
+    if(e.keyCode === 9){
         e.preventDefault();
         var indent = '    ';
         var start = e.target.selectionStart;
