@@ -6,22 +6,30 @@ const DataType = {
   MAP: 'map',
   SIMPLE: 'simple',
 };
+var key = 1
 
 export class VisualUI extends React.Component {
 
   componentWillReceiveProps(props) {
-    console.log(props);
   }
 
   render() {
-    console.log('trigger render, props.json: ', this.props.json);
-    if (!this.props.json) {
+    const jsonText = this.props.jsonText;
+    console.log('trigger render, props.jsonText: ', jsonText);
+    if (jsonText === '') {
       return <section className="visual-ui"></section>;
     }
-    return <section className="visual-ui">{Create(this.props.json, true)}</section>;
+    let data;
+    try {
+      data = JSON.parse(this.props.jsonText);
+    } catch (e) {
+      return <section className="visual-ui">{e.toString()}</section>;
+    }
+    return <section className="visual-ui">{Create(data, true)}</section>;
   }
 
 }
+
 function getDataType(s) {
   if (s instanceof Array) {
     return DataType.ARRAY;
@@ -31,10 +39,9 @@ function getDataType(s) {
   }
   return DataType.SIMPLE;
 }
-var key = 1
+
 function Create(data, isFirstLevel) {
   const dataType = getDataType(data);
-  console.log(dataType, data);
   switch (dataType) {
     case DataType.ARRAY:
       return isFirstLevel
