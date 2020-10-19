@@ -16,7 +16,7 @@ export class List extends React.Component {
     return (
       <ul style={{ paddingLeft: isRoot ? '20px' : '0px', width: '100%' }}>
         <li className="relative">
-          <div className={`triangle-toggle ${this.state.fold ? 'fold' : 'unfold'}`}></div>
+          <div className={`triangle-toggle ${this.state.fold ? 'fold' : 'unfold'}`} onClick={this.onToggleClick}></div>
           {
             !isRoot && <label className="index">{index === undefined ? '' : `${index}`}</label>
           }
@@ -25,7 +25,7 @@ export class List extends React.Component {
           }
           <label className="default-black">{createAddon(arr)}</label>
         </li>
-        <li>
+        <li style={{ display: this.state.fold ? 'none' : 'block' }}>
           <ul style={{ paddingLeft: '30px', width: '100%' }}>
             {
               arr.map((item, i) => 
@@ -36,6 +36,12 @@ export class List extends React.Component {
         </li>
       </ul>
     );
+  }
+
+  onToggleClick = () => {
+    this.setState({
+      fold: !this.state.fold
+    });
   }
 
 }

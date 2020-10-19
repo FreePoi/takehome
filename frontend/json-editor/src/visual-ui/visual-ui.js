@@ -14,7 +14,6 @@ export class VisualUI extends React.Component {
 
   render()   {
     const jsonText = this.props.jsonText;
-    console.log('trigger render, props.jsonText: ', jsonText);
     if (jsonText === '') {
       return <section className="visual-ui"></section>;
     }
