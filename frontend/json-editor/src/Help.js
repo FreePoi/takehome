@@ -8,12 +8,25 @@ export class Help extends React.Component {
   state = {
     jsonText: 
 `[
-  1,
-  2,
+  2020,
+  -1,
+  0,
   {
-    "a": 2,
-    "b": [true, false, null, 1, 0, "", "0", [], {}]
-  }
+    "a": [true, false, null, 1, 0, "", "0", [], {}],
+    "b": 2020,
+    "c": true,
+    "d": false,
+    "e": "hello world",
+    "f": null,
+    "g": [],
+    "h": {}
+  },
+  true,
+  false,
+  "hello world",
+  null,
+  [],
+  {}
 ]`
   };
 

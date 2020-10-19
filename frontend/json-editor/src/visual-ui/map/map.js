@@ -6,7 +6,7 @@ export class Mapp extends React.Component {
   constructor() {
     super();
     this.state = this.state || {};
-    this.state.fold = true;
+    this.state.fold = false;
   }
   
   render() {
