@@ -17,6 +17,8 @@
   top: -1px;
 }
 .triangle-toggle {
+  position: absolute;
+
   cursor: pointer;
   display: inline-block;
   margin-right: 5px;
@@ -32,15 +34,22 @@
   border-top:6px solid transparent;
   border-bottom:6px solid transparent; */
 }
-.fold {
+.unfold {
   /*朝下的三角形*/
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
   border-top: 8px solid #909090;
+  top: 8px;
+  left: -16px;
 }
-.unfold {
+.fold {
   /*朝右的三角形*/
   border-left: 8px solid #909090;
   border-top: 6px solid transparent;
   border-bottom: 8px solid transparent;
+  top: 4px;
+  left: -15px;
+}
+.relative {
+  position: relative;
 }
